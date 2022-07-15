@@ -28,6 +28,23 @@ public class Ticket implements GenerateInfo{
         this.amount = 0;
     }
 
+    public Ticket(String code, Bicycle bicycle, User user, LocalDate date, LocalTime entranceHour,
+                   boolean helmet, boolean noDamage, int amount, Status status) {
+        this.code = code;
+        this.bicycle = bicycle;
+        this.user = user;
+        this.date = date;
+        this.entranceHour = entranceHour;
+        this.helmet = helmet;
+        this.noDamage = noDamage;
+        this.amount = amount;
+        this.status = status;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public void setStatus(Status status) {
         this.status = status;
     }

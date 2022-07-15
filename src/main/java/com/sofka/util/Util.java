@@ -1,7 +1,9 @@
 package com.sofka.util;
 
 import com.sofka.info.Bicycle;
+import com.sofka.info.Status;
 import com.sofka.info.Ticket;
+import com.sofka.info.User;
 
 
 import java.io.BufferedReader;
@@ -9,9 +11,13 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static java.lang.Integer.parseInt;
 
 public class Util {
 
@@ -19,8 +25,10 @@ public class Util {
     static FileWriter fileWriter = null;
     public static BufferedWriter bufferedWriter;
 
-    static final String WRITING_FILE = "src/main/resources/tickets.txt";
-    public static ArrayList<Bicycle> readBicycle(String externalFile){
+    static final String BICYCLES_FILE = "src/main/resources/bicycles.txt";
+
+    static final String TICKETS_FILE = "src/main/resources/tickets.txt";
+    public static ArrayList<Bicycle> readBicycle(){
         File file;
         FileReader fileReader;
         BufferedReader bufferedReader;
@@ -28,7 +36,7 @@ public class Util {
 
         try {
 
-            file = new File(externalFile);
+            file = new File(BICYCLES_FILE );
             fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
 
@@ -50,9 +58,45 @@ public class Util {
         return bicycles;
     }
 
+    public static ArrayList<Ticket> readTicket(){
+        File file;
+        FileReader fileReader;
+        BufferedReader bufferedReader;
+        ArrayList<Ticket> tickets = new ArrayList<>();
+
+        try {
+
+            file = new File(TICKETS_FILE );
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+
+            String line;
+            List<String> newLine;
+
+            while ((line = bufferedReader.readLine()) != null){
+                newLine = Arrays.stream(line.split(",")).toList();
+                Bicycle bicycle = new Bicycle(newLine.get(1),newLine.get(2),newLine.get(3),Boolean.parseBoolean(newLine.get(4)));
+                User user =  new User(newLine.get(5), parseInt(newLine.get(6)) ,newLine.get(7),parseInt(newLine.get(8)));
+                Ticket ticket = new Ticket(newLine.get(0),bicycle,user,
+                        LocalDate.parse(newLine.get(9)), LocalTime.parse(newLine.get(10)),Boolean.parseBoolean(newLine.get(12)),
+                        Boolean.parseBoolean(newLine.get(13)), parseInt(newLine.get(14)), Status.valueOf(newLine.get(15))
+                );
+                tickets.add(ticket);
+            }
+
+            bufferedReader.close();
+            fileReader.close();
+
+        }catch (Exception exception){
+            System.out.println("File reading has failed - " +  exception.getMessage());
+        }
+
+        return tickets;
+    }
+
     public static void openText(){
         try {
-            file = new File(WRITING_FILE);
+            file = new File(TICKETS_FILE);
             fileWriter = new FileWriter(file);
             bufferedWriter = new BufferedWriter(fileWriter);
 

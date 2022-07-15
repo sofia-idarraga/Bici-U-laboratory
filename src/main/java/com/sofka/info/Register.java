@@ -9,9 +9,9 @@ import static com.sofka.util.Util.writeTicket;
 
 public class Register {
 
-    static final String READING_FILE = "src/main/resources/bicycles.txt";
 
-    public static ArrayList<Bicycle> bicycles =     readBicycle(READING_FILE);
+
+    public static ArrayList<Bicycle> bicycles =     readBicycle();
     public static ArrayList<User> users = new ArrayList<>();
 
     static int count;

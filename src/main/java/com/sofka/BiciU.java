@@ -8,10 +8,12 @@ import static com.sofka.util.Util.*;
 
 public class BiciU {
     public static void main(String[] args){
-        openText();
-        defaultUsers();
-        System.out.println(users);
-        printMenu();
-        closeText();
+        System.out.println(readTicket());
+
+        //openText();
+        //defaultUsers();
+       // System.out.println(users);
+       // printMenu();
+       // closeText();
     }
 }
