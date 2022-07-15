@@ -1,7 +1,7 @@
 package com.sofka.ui;
 
-
 import static com.sofka.ui.BorrowMenu.borrowBicycle;
+import static com.sofka.ui.ReturnBicycleMenu.returnBicycle;
 import static com.sofka.ui.UserMenu.createUser;
 import static com.sofka.util.Reader.scannerInt;
 
@@ -40,6 +40,7 @@ public class Menu {
                 borrowBicycle();
                 break;
             case 3:
+                returnBicycle();
                 break;
             case 4:
                 break;

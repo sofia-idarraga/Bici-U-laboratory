@@ -41,6 +41,30 @@ public class Ticket implements GenerateInfo{
         this.status = status;
     }
 
+    public void setEndHour(LocalTime endHour) {
+        this.endHour = endHour;
+    }
+
+    public void setHelmet(boolean helmet) {
+        this.helmet = helmet;
+    }
+
+    public void setNoDamage(boolean noDamage) {
+        this.noDamage = noDamage;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public LocalTime getEntranceHour() {
+        return entranceHour;
+    }
+
     public void setCode(String code) {
         this.code = code;
     }
