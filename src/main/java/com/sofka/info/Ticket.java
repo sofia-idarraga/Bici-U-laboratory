@@ -57,6 +57,10 @@ public class Ticket implements GenerateInfo{
         this.amount = amount;
     }
 
+    public User getUser() {
+        return user;
+    }
+
     public String getCode() {
         return code;
     }
@@ -93,9 +97,10 @@ public class Ticket implements GenerateInfo{
                 "Name: " + user.getName() + '\n'+
                 "Date: " + date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + '\n'+
                 "Start time: " + entranceHour.format(DateTimeFormatter.ofPattern("HH:mm")) + '\n'+
+                "End time: " + endHour.format(DateTimeFormatter.ofPattern("HH:mm")) + '\n'+
                 "Have helmet: " + helmet + '\n'+
                 "Good condition: " + noDamage + '\n'+
-                "Amount: " + amount + '\n'+
+                "Amount: $" + amount + '\n'+
                 "Status: " + status+ '\n';
     }
 }

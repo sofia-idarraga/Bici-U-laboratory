@@ -29,6 +29,10 @@ public class User implements GenerateInfo{
         return debts;
     }
 
+    public void setDebts(boolean debts) {
+        this.debts = debts;
+    }
+
     @Override
     public String generateCode(int dni, String type) {
         return (type+"-"+String.format("%09d", dni));

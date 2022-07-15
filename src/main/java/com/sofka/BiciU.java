@@ -9,13 +9,13 @@ import static com.sofka.util.Util.*;
 
 public class BiciU {
     public static void main(String[] args){
-        System.out.println(readTicket());
-
+       // System.out.println(readTicket());
         //openText();
         //defaultUsers();
        // System.out.println(users);
        // printMenu();
-        returnBicycle();
+       returnBicycle();
+       closeText();
 
     }
 }

@@ -2,10 +2,12 @@ package com.sofka.ui;
 
 import com.sofka.info.Status;
 import com.sofka.info.Ticket;
+import com.sofka.info.User;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static com.sofka.info.Register.users;
 import static com.sofka.util.Reader.scannerInt;
 import static com.sofka.util.Reader.scannerText;
 import static com.sofka.util.Util.closeText;
@@ -35,7 +37,7 @@ public class ReturnBicycleMenu {
     static int calculateAmount(boolean helmet, int damages, int time){
         int price = 5;
         int amount = 0;
-        if(helmet){
+        if(!helmet){
             amount += price;
         }
         if(damages > 0){
@@ -69,10 +71,19 @@ public class ReturnBicycleMenu {
         }
         ticket.setAmount(amount);
         if(amount !=0){
+            updateUserStatus(ticket);
             ticket.setStatus(Status.PENDING);
         }
         if (amount==0){
             ticket.setStatus(Status.OK);
+        }
+    }
+
+    public static void updateUserStatus(Ticket ticket){
+        for (User user: users) {
+            if(user.equals(ticket.getUser()) ){
+                user.setDebts(true);
+            }
         }
     }
 
@@ -81,7 +92,5 @@ public class ReturnBicycleMenu {
         for (Ticket ticket: tickets) {
             writeTicket(ticket);
         }
-        // ESTO HAY QUE QUITARLO
-        closeText();
     }
 }
