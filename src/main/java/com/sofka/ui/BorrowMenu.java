@@ -3,7 +3,10 @@ package com.sofka.ui;
 import com.sofka.info.Bicycle;
 import com.sofka.info.User;
 
-import static com.sofka.info.Register.*;
+import static com.sofka.info.Register.generateTicket;
+import static com.sofka.info.Register.users;
+import static com.sofka.info.Register.bicycles;
+
 import static com.sofka.util.Reader.scannerText;
 import static java.util.Objects.isNull;
 
@@ -30,7 +33,7 @@ public class BorrowMenu {
         System.out.println("Bicycle chosen! ");
         System.out.println(bicycle);
         bicycle.setAvailable(false);
-
+        generateTicket(bicycle,user);
     }
 
     static boolean checkUser(User user){

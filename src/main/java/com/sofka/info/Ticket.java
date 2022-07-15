@@ -24,9 +24,19 @@ public class Ticket implements GenerateInfo{
         this.entranceHour = entranceHour;
     }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public String generateCode(int count, String type){
         count += 1;
         return (type+"-"+String.format("%03d",   count));
+    }
+
+
+    public String toSaveTicket() {
+        return  (code +"," + bicycle +"," + user + "," + date +"," + entranceHour +"," + endHour +
+                "," + helmet +"," + noDamage +"," + amount +"," + status);
     }
 }
