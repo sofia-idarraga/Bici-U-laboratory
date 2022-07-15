@@ -23,9 +23,13 @@ public class ReturnBicycleMenu {
         for (Ticket ticket: tickets) {
             if(code.equals(ticket.getCode())){
                setTicket(ticket);
+                System.out.println("Ticket updated");
+                System.out.println("\n"+ticket);
             }
         }
         saveChanges(tickets);
+        System.out.println("changes have been saved");
+
     }
 
     static int calculateAmount(boolean helmet, int damages, int time){
