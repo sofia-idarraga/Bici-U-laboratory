@@ -13,8 +13,5 @@ public class BiciU {
         System.out.println(users);
         printMenu();
         closeText();
-
-
-
     }
 }

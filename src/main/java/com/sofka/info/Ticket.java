@@ -3,6 +3,7 @@ package com.sofka.info;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Ticket implements GenerateInfo{
     private String code;
@@ -22,6 +23,9 @@ public class Ticket implements GenerateInfo{
         this.user = user;
         this.date = date;
         this.entranceHour = entranceHour;
+        this.helmet = true;
+        this.noDamage = true;
+        this.amount = 0;
     }
 
     public void setStatus(Status status) {
@@ -34,9 +38,23 @@ public class Ticket implements GenerateInfo{
         return (type+"-"+String.format("%03d",   count));
     }
 
-
+    @Override
     public String toSaveTicket() {
-        return  (code +"," + bicycle +"," + user + "," + date +"," + entranceHour +"," + endHour +
+        return  (code +"," + bicycle.toSaveTicket() +"," + user.toSaveTicket() + "," + date +"," + entranceHour +"," + endHour +
                 "," + helmet +"," + noDamage +"," + amount +"," + status);
+    }
+
+    @Override
+    public String toString() {
+        return  "Code: " + code + '\n'+
+                "Bicycle: " + bicycle.getUid() + '\n'+
+                "User: " + user.getCode() + '\n'+
+                "Name: " + user.getName() + '\n'+
+                "Date: " + date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + '\n'+
+                "Start time: " + entranceHour.format(DateTimeFormatter.ofPattern("HH:mm")) + '\n'+
+                "Have helmet: " + helmet + '\n'+
+                "Good condition: " + noDamage + '\n'+
+                "Amount: " + amount + '\n'+
+                "Status: " + status+ '\n';
     }
 }

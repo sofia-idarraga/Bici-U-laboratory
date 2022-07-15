@@ -1,6 +1,0 @@
-T-002,Code: BIC-25
-Type: Road
-Color: red
-,ID: S-000022222
-Name: Ana Agudelo
-Age: 19,2022-07-15,13:16:05.768639200,null,false,false,0,ACTIVE

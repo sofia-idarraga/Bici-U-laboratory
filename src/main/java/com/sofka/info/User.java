@@ -40,4 +40,12 @@ public class User implements GenerateInfo{
                 "Name: " + name + '\n' +
                 "Age: " + age ;
     }
+    @Override
+    public String toSaveTicket(){
+        return type+","+dni+","+name+","+age;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

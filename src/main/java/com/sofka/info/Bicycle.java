@@ -26,10 +26,17 @@ public class Bicycle {
         return type;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
     @Override
     public String toString() {
         return  "Code: " + uid + '\n' +
                 "Type: " + type + '\n' +
                 "Color: " + color + '\n';
+    }
+    public String toSaveTicket(){
+        return uid+","+type+","+color+","+available;
     }
 }

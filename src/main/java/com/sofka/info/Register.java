@@ -28,6 +28,9 @@ public class Register {
         ticket.setStatus(Status.ACTIVE);
         count +=1;
         writeTicket(ticket);
+        System.out.println("____________________________");
+        System.out.println("A ticket was generated!");
+        System.out.println(ticket);
     }
 
 
