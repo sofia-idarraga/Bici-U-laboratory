@@ -10,5 +10,18 @@ public class Register {
     public static ArrayList<Bicycle> bicycles =     readBicycle(EXTERNAL_FILE);
     public static ArrayList<User> users = new ArrayList<>();
 
+    public static void defaultUsers(){
+
+        users.add(new User("P",11111,"David Jaramillo",25));
+        users.add(new User("S",22222,"Ana Agudelo",19));
+    }
+
+
+
+
+
+
+
+
 
 }

@@ -21,6 +21,14 @@ public class User implements GenerateInfo{
         return dni;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public boolean getDebts(){
+        return debts;
+    }
+
     @Override
     public String generateCode(int dni, String type) {
         return (type+"-"+String.format("%09d", dni));

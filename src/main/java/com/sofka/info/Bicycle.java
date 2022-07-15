@@ -14,13 +14,22 @@ public class Bicycle {
         this.available = available;
     }
 
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public String getType() {
+        return type;
+    }
+
     @Override
     public String toString() {
-        return "Bicycle{" +
-                "uid='" + uid + '\'' +
-                ", type='" + type + '\'' +
-                ", color='" + color + '\'' +
-                ", available=" + available +
-                '}';
+        return  "Code: " + uid + '\n' +
+                "Type: " + type + '\n' +
+                "Color: " + color + '\n';
     }
 }

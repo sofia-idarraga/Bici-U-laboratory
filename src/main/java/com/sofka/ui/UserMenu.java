@@ -15,10 +15,10 @@ public class UserMenu {
             System.out.println("User is already registered ");
             return;
         }
-        System.out.println("Student or Proffesor? (S/T) ");
+        System.out.println("Student or Proffesor? (S/P) ");
         String type = scannerText();
-        while (!type.equalsIgnoreCase("S")  && !type.equalsIgnoreCase("T")){
-            System.out.println("Invalid entrance, try again (S/T) ");
+        while (!type.equalsIgnoreCase("S")  && !type.equalsIgnoreCase("P")){
+            System.out.println("Invalid entrance, try again (S/P) ");
             type = scannerText();
         }
         System.out.println("Enter your complete name: ");

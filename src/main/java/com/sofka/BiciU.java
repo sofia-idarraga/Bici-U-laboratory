@@ -1,17 +1,16 @@
 package com.sofka;
 
-import com.sofka.info.Bicycle;
-
-import java.util.ArrayList;
-
+import static com.sofka.info.Register.*;
 import static com.sofka.ui.Menu.printMenu;
-import static com.sofka.util.Util.readBicycle;
+
 
 public class BiciU {
     public static void main(String[] args) {
 
-
+        defaultUsers();
+        System.out.println(users);
         printMenu();
+
 
     }
 }
