@@ -48,14 +48,14 @@ public class ReturnBicycleMenu {
         }
         return amount;
     }
-    static int calculateDifference(LocalTime entrance, LocalTime end){
+    private static int calculateDifference(LocalTime entrance, LocalTime end){
         int entranceInMinutes = entrance.getHour()*60 + entrance.getMinute();
         int endInMinutes = end.getHour()*60 + end.getMinute();
 
         return endInMinutes-entranceInMinutes;
     }
 
-    static void setTicket(Ticket ticket){
+    private static void setTicket(Ticket ticket){
         System.out.println("Has helmet: ");
         boolean helmet = Boolean.parseBoolean(scannerText());
         System.out.println("Quantity of damages: ");
@@ -79,7 +79,7 @@ public class ReturnBicycleMenu {
         }
     }
 
-    public static void updateUserStatus(Ticket ticket){
+    private static void updateUserStatus(Ticket ticket){
         for (User user: users) {
             if(user.equals(ticket.getUser()) ){
                 user.setDebts(true);
@@ -87,7 +87,8 @@ public class ReturnBicycleMenu {
         }
     }
 
-    public static void saveChanges(ArrayList<Ticket> tickets){
+
+    private static void saveChanges(ArrayList<Ticket> tickets){
         openText();
         for (Ticket ticket: tickets) {
             writeTicket(ticket);

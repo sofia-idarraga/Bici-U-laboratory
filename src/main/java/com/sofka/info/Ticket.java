@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class Ticket implements GenerateInfo{
+public class Ticket implements IGenerateInfo {
     private String code;
     private Bicycle bicycle;
     private User user;

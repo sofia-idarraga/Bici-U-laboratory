@@ -1,6 +1,6 @@
 package com.sofka.info;
 
-public class User implements GenerateInfo{
+public class User implements IGenerateInfo {
     private String type;
     private int dni;
     private String code;

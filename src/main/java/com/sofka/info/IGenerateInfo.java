@@ -1,6 +1,6 @@
 package com.sofka.info;
 
-public interface GenerateInfo {
+public interface IGenerateInfo {
     String generateCode(int count, String type);
 
     String toSaveTicket();
