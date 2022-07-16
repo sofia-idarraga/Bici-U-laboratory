@@ -97,6 +97,13 @@ public class Ticket implements IGenerateInfo {
                 "," + helmet +"," + noDamage +"," + amount +"," + status);
     }
 
+    private String printEndHour(LocalTime endHour){
+        if(this.endHour == null){
+            return "-";
+        }
+        else {return this.endHour.format(DateTimeFormatter.ofPattern("HH:mm"));}
+    }
+
     @Override
     public String toString() {
         return  "Code: " + code + '\n'+
@@ -105,7 +112,7 @@ public class Ticket implements IGenerateInfo {
                 "Name: " + user.getName() + '\n'+
                 "Date: " + date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + '\n'+
                 "Start time: " + entranceHour.format(DateTimeFormatter.ofPattern("HH:mm")) + '\n'+
-                "End time: " + endHour.format(DateTimeFormatter.ofPattern("HH:mm")) + '\n'+
+                "End time: " + printEndHour(endHour) + '\n'+
                 "Have helmet: " + helmet + '\n'+
                 "Good condition: " + noDamage + '\n'+
                 "Amount: $" + amount + '\n'+

@@ -1,2 +1,2 @@
-T-001,BIC-23,Mountain,red,false,S,22222,Ana Agudelo,19,2022-07-15,17:00:47.978400400,null,true,true,6,OK
-T-002,BIC-25,Road,red,false,P,11111,David Jaramillo,25,2022-07-15,17:01:10.326577200,null,true,false,16,PENDING
+T-001,BIC-23,Mountain,red,false,S,12345,Sofia Idarraga,24,2022-07-15,20:49:29.518284800,null,true,true,0,ACTIVE
+T-002,BIC-22,Mountain,yellow,false,S,22222,Ana Agudelo,19,2022-07-15,20:50:05.982909800,null,true,true,0,ACTIVE
