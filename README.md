@@ -20,7 +20,7 @@ Once the complete code is downloaded, you just need to run _BiciU_
 
 - [Youtube](https://www.youtube.com/watch?v=J898hvNdHZw) - Bici U Laboratory
 
-- Let's suppose there is only one bicycle of each type. What happen if we try to borrow two Mountain Bicycles
+- Let's suppose there is only one bicycle of each type. What happen if we try to borrow two Mountain Bicycles?
 
 ![1](https://github.com/sofia-idarraga/Bici-U-laboratory/blob/d5221c498bdfcdebaa3ade7592e371f4c2bad6e4/evidence/sc1.PNG)
 ![2](https://github.com/sofia-idarraga/Bici-U-laboratory/blob/d5221c498bdfcdebaa3ade7592e371f4c2bad6e4/evidence/sc2.PNG)
