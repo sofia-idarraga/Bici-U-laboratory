@@ -1,1 +1,1 @@
-T-001,BIC-23,Mountain,red,false,P,11111,David Jaramillo,25,2022-07-15,23:01:12.647978,23:01:27.797102,false,false,10,PENDING
+T-001,BIC-23,Mountain,red,false,P,11111,David Jaramillo,25,2022-07-15,23:35:57.501870700,23:36:15.595310900,true,true,0,OK

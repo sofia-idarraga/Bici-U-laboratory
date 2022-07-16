@@ -81,6 +81,9 @@ public class Util {
                         LocalDate.parse(newLine.get(9)), LocalTime.parse(newLine.get(10)),Boolean.parseBoolean(newLine.get(12)),
                         Boolean.parseBoolean(newLine.get(13)), parseInt(newLine.get(14)), Status.valueOf(newLine.get(15))
                 );
+                if(!newLine.get(11).equals("null") ){
+                    ticket.setEndHour(LocalTime.parse(newLine.get(11)));
+                }
                 tickets.add(ticket);
             }
 

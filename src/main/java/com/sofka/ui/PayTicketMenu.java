@@ -33,7 +33,7 @@ public class PayTicketMenu  {
     private static void setTicketAndUser(Ticket ticket) {
         ticket.setStatus(Status.OK);
         for (User user: users) {
-            if(user.equals(ticket.getUser()) ){
+            if(user.getCode().equals(ticket.getUser().getCode()) ){
                 user.setDebts(false);
             }
         }

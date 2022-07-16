@@ -96,7 +96,6 @@ public class ReturnBicycleMenu {
 
         for (User user: users) {
             if(user.getCode().equals(ticket.getUser().getCode())){
-                System.out.println("usuario encontrado");
                 user.setDebts(true);
             }
         }
