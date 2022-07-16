@@ -1,0 +1,24 @@
+
+~
+java:S1319"hThe type of "bicycles" should be an interface such as "List" rather than the implementation "ArrayList".(¯ıĞ
+{
+java:S1319"eThe type of "users" should be an interface such as "List" rather than the implementation "ArrayList".(èáïÿ
+‰
+java:S1319%"gThe type of "tickets" should be an interface such as "List" rather than the implementation "ArrayList".(Ñ†ôÚşÿÿÿÿ8ïèğ¢ 0
+j
+java:S1104"TMake bicycles a static final constant or non-public and provide accessors if needed.(¯ıĞ
+g
+java:S1104"QMake users a static final constant or non-public and provide accessors if needed.(èáïÿ
+D
+java:S1444".Make this "public static bicycles" field final(¯ıĞ
+A
+java:S1444"+Make this "public static users" field final(èáïÿ
+:
+java:S2386"Make this member "protected".(¯ıĞ8ë÷´ 0
+3
+java:S2386"Make this member "protected".(èáïÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(®®ÿ¾úÿÿÿÿ
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(¹¿ô8šÇ¹› 0
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(¿±§øÿÿÿÿ8Öº› 0
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ÏÄ¥‚úÿÿÿÿ8„ãğ› 0

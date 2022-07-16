@@ -1,1 +1,2 @@
-T-001,BIC-23,Mountain,red,false,S,22222,Ana Agudelo,19,2022-07-15,23:36:57.867938500,23:37:17.065295900,false,false,10,OK
+T-001,BIC-23,Mountain,red,false,S,22222,Ana Agudelo,19,2022-07-16,10:15:42.990651600,10:15:54.532717200,false,false,15,OK
+T-002,BIC-25,Road,red,false,S,22222,Ana Agudelo,19,2022-07-16,10:17:34.101493300,null,true,true,0,ACTIVE

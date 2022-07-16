@@ -9,3 +9,11 @@ X
 (src/main/java/com/sofka/info/Status.java,5\c\5c8047a368763a8cb2825a9c0b0d73a9e0926521
 T
 $src/main/java/com/sofka/ui/Menu.java,c\b\cba30f4c1065d80a93f5b7fcc355b5c95860bdd6
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+X
+(src/main/java/com/sofka/ui/UserMenu.java,4\1\41b6593a305457056f96362ed88d997c24dd8207
+Z
+*src/main/java/com/sofka/info/Register.java,1\1\115ebbbdfd95614d4ac423918781a9a1f8396016
+Z
+*src/main/java/com/sofka/ui/BorrowMenu.java,9\b\9b665e0590e99f0d0253c81acdae2336af9865ce

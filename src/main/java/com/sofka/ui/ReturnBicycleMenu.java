@@ -44,7 +44,7 @@ public class ReturnBicycleMenu {
         if(damages > 0){
             amount += price*damages;
         }
-        if(time>59){
+        if(time>30){
            amount += Math.floor(time/30)*3;
         }
         return amount;

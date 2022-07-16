@@ -3,9 +3,8 @@ package com.sofka;
 import static com.sofka.info.Register.defaultUsers;
 import static com.sofka.info.Register.users;
 import static com.sofka.ui.Menu.printMenu;
-import static com.sofka.ui.ReturnBicycleMenu.returnBicycle;
-import static com.sofka.ui.TicketHistoryMenu.printTicketMenu;
-import static com.sofka.util.Util.*;
+import static com.sofka.util.Util.closeText;
+import static com.sofka.util.Util.openText;
 
 
 public class BiciU {
