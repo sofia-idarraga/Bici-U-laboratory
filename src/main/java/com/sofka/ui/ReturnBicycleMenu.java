@@ -12,9 +12,7 @@ import static com.sofka.info.Register.users;
 import static com.sofka.util.Reader.scannerInt;
 import static com.sofka.util.Reader.scannerText;
 import static com.sofka.util.Util.closeText;
-import static com.sofka.util.Util.openText;
 import static com.sofka.util.Util.readTicket;
-import static com.sofka.util.Util.writeTicket;
 
 public class ReturnBicycleMenu {
 

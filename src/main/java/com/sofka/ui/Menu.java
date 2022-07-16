@@ -3,6 +3,7 @@ package com.sofka.ui;
 import static com.sofka.ui.BorrowMenu.borrowBicycle;
 import static com.sofka.ui.PayTicketMenu.payTicket;
 import static com.sofka.ui.ReturnBicycleMenu.returnBicycle;
+import static com.sofka.ui.TicketHistoryMenu.printTicketMenu;
 import static com.sofka.ui.UserMenu.createUser;
 import static com.sofka.util.Reader.scannerInt;
 
@@ -47,6 +48,7 @@ public class Menu {
                 payTicket();
                 break;
             case 5:
+                printTicketMenu();
                 break;
             case 6:
                 break;
@@ -55,8 +57,4 @@ public class Menu {
 
         }
     }
-
-
-
-
 }

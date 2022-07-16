@@ -53,12 +53,20 @@ public class Ticket implements IGenerateInfo {
         this.noDamage = noDamage;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
     public void setAmount(int amount) {
         this.amount = amount;
     }
 
     public User getUser() {
         return user;
+    }
+
+    public Status getStatus() {
+        return status;
     }
 
     public String getCode() {
