@@ -10,6 +10,7 @@ import static com.sofka.util.Util.*;
 
 public class BiciU {
     public static void main(String[] args){
+
         openText();
         defaultUsers();
         System.out.println(users);

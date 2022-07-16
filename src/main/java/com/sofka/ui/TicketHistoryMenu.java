@@ -49,7 +49,7 @@ public class TicketHistoryMenu {
     }
 
     private static void printAll(ArrayList<Ticket> tickets){
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
         System.out.format("%-10s %-20s %-20s %-20s %-20s", "Code ", "| User ID ", "| Name ", "| Amount ($) ", "| Status");
         System.out.println();
         for (Ticket ticket: tickets) {
@@ -61,7 +61,7 @@ public class TicketHistoryMenu {
     private static void printByCode(ArrayList<Ticket> tickets){
         System.out.println("Entrance the ticket code: ");
         String code = scannerText();
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
         System.out.format("%-10s %-20s %-20s %-20s %-20s", "Code ", "| User ID ", "| Name ", "| Amount ($) ", "| Status");
         System.out.println();
         for (Ticket ticket: tickets) {
@@ -74,7 +74,7 @@ public class TicketHistoryMenu {
     private static void printByStatus(ArrayList<Ticket> tickets){
         System.out.println("Entrance the ticket status: ");
         String status = scannerText();
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
         System.out.format("%-10s %-20s %-20s %-20s %-20s", "Code ", "| User ID ", "| Name ", "| Amount ($) ", "| Status");
         System.out.println();
         for (Ticket ticket: tickets) {

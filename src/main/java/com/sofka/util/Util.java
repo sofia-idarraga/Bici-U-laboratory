@@ -110,7 +110,6 @@ public class Util {
             bufferedWriter.close();
         }catch (Exception exception){
             System.out.println("Something happened - " +  exception.getMessage());
-
         }
     }
 

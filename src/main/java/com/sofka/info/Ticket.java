@@ -62,7 +62,11 @@ public class Ticket implements IGenerateInfo {
     }
 
     public User getUser() {
-        return user;
+        return this.user;
+    }
+
+    public Bicycle getBicycle() {
+        return bicycle;
     }
 
     public Status getStatus() {
@@ -77,9 +81,6 @@ public class Ticket implements IGenerateInfo {
         return entranceHour;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public void setStatus(Status status) {
         this.status = status;
@@ -98,7 +99,7 @@ public class Ticket implements IGenerateInfo {
     }
 
     private String printEndHour(LocalTime endHour){
-        if(this.endHour == null){
+        if(endHour == null){
             return "-";
         }
         else {return this.endHour.format(DateTimeFormatter.ofPattern("HH:mm"));}

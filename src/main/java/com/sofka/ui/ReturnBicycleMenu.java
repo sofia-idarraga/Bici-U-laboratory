@@ -1,5 +1,6 @@
 package com.sofka.ui;
 
+import com.sofka.info.Bicycle;
 import com.sofka.info.Status;
 import com.sofka.info.Ticket;
 import com.sofka.info.User;
@@ -7,6 +8,7 @@ import com.sofka.info.User;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static com.sofka.info.Register.bicycles;
 import static com.sofka.info.Register.saveTicketChanges;
 import static com.sofka.info.Register.users;
 import static com.sofka.util.Reader.scannerInt;
@@ -73,6 +75,8 @@ public class ReturnBicycleMenu {
         ticket.setAmount(amount);
         if(amount !=0){
             updateUserStatus(ticket);
+            updateBicycleStatus(ticket);
+            System.out.println(ticket.getUser().getDebts());
             ticket.setStatus(Status.PENDING);
         }
         if (amount==0){
@@ -80,11 +84,22 @@ public class ReturnBicycleMenu {
         }
     }
 
+    private static void updateBicycleStatus(Ticket ticket){
+        for (Bicycle bicycle: bicycles) {
+            if(bicycle.getUid().equals(ticket.getBicycle().getUid())){
+                bicycle.setAvailable(true);
+            }
+        }
+    }
+
     private static void updateUserStatus(Ticket ticket){
+
         for (User user: users) {
-            if(user.equals(ticket.getUser()) ){
+            if(user.getCode().equals(ticket.getUser().getCode())){
+                System.out.println("usuario encontrado");
                 user.setDebts(true);
             }
         }
+
     }
 }
