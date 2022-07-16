@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static com.sofka.util.Util.openText;
 import static com.sofka.util.Util.readBicycle;
 import static com.sofka.util.Util.writeTicket;
 
@@ -33,6 +34,11 @@ public class Register {
         System.out.println(ticket);
     }
 
-
+    public static void saveTicketChanges(ArrayList<Ticket> tickets) {
+        openText();
+        for (Ticket ticket: tickets) {
+            writeTicket(ticket);
+        }
+    }
 
 }

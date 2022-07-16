@@ -6,6 +6,7 @@ import com.sofka.info.User;
 
 import java.util.ArrayList;
 
+import static com.sofka.info.Register.saveTicketChanges;
 import static com.sofka.info.Register.users;
 import static com.sofka.util.Reader.scannerText;
 import static com.sofka.util.Util.closeText;
@@ -27,7 +28,7 @@ public class PayTicketMenu  {
                 System.out.println("\n"+ticket);
             }
         }
-        saveChanges(tickets);
+        saveTicketChanges(tickets);
         System.out.println("changes have been saved");
     }
 
@@ -39,13 +40,5 @@ public class PayTicketMenu  {
             }
         }
     }
-
-    private static void saveChanges(ArrayList<Ticket> tickets) {
-        openText();
-        for (Ticket ticket: tickets) {
-            writeTicket(ticket);
-        }
-    }
-
 
 }

@@ -1,6 +1,7 @@
 package com.sofka.ui;
 
 import static com.sofka.ui.BorrowMenu.borrowBicycle;
+import static com.sofka.ui.PayTicketMenu.payTicket;
 import static com.sofka.ui.ReturnBicycleMenu.returnBicycle;
 import static com.sofka.ui.UserMenu.createUser;
 import static com.sofka.util.Reader.scannerInt;
@@ -31,7 +32,7 @@ public class Menu {
         }while(option != 6);
     }
 
-    static void cases(int option){
+    private static void cases(int option){
         switch (option){
             case 1:
                 createUser();
@@ -43,6 +44,7 @@ public class Menu {
                 returnBicycle();
                 break;
             case 4:
+                payTicket();
                 break;
             case 5:
                 break;

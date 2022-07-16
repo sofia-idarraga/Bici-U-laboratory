@@ -7,6 +7,7 @@ import com.sofka.info.User;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static com.sofka.info.Register.saveTicketChanges;
 import static com.sofka.info.Register.users;
 import static com.sofka.util.Reader.scannerInt;
 import static com.sofka.util.Reader.scannerText;
@@ -29,7 +30,7 @@ public class ReturnBicycleMenu {
                 System.out.println("\n"+ticket);
             }
         }
-        saveChanges(tickets);
+        saveTicketChanges(tickets);
         System.out.println("changes have been saved");
 
     }
@@ -68,6 +69,8 @@ public class ReturnBicycleMenu {
         ticket.setHelmet(helmet);
         if (damages!=0){
             ticket.setNoDamage(false);
+        }else{
+            ticket.setNoDamage(true);
         }
         ticket.setAmount(amount);
         if(amount !=0){
@@ -84,14 +87,6 @@ public class ReturnBicycleMenu {
             if(user.equals(ticket.getUser()) ){
                 user.setDebts(true);
             }
-        }
-    }
-
-
-    private static void saveChanges(ArrayList<Ticket> tickets){
-        openText();
-        for (Ticket ticket: tickets) {
-            writeTicket(ticket);
         }
     }
 }
